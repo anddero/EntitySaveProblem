@@ -1,0 +1,26 @@
+spring:
+  h2.console.enabled: true # Access database from http://localhost:8888/h2-console/
+  datasource:
+    url: jdbc:h2:mem:debugdb
+    username: test
+    password: z
+    sql-script-encoding: utf-8
+  jpa:
+    hibernate.ddl-auto: create
+    properties.hibernate.jdbc.time_zone: UTC
+    open-in-view: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  devtools:
+    add-properties: true
+  http:
+    log-request-details: true
+
+server.port: 8888
+
+logging:
+  level:
+    root: INFO
+    web: DEBUG
